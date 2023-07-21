@@ -39,7 +39,9 @@ h1:hover::after{
     font-weight: 500;
     font-size: 25px !important;
     color: rgb(69,165,90);
-    
+    background-image: linear-gradient(90deg, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .form-control:focus {
