@@ -1,0 +1,137 @@
+:root{
+    --mainfont:'PT Sans Caption', sans-serif;
+}
+/*
+font-family: 'Pacifico', cursive;
+font-family: 'Righteous', cursive;*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F7ECDE;
+}
+h1{
+    font-family: 'Pacifico', cursive;
+    font-weight: 500;
+    font-size: 50px;
+    width: fit-content;
+    position: relative;
+}
+h1::after{
+    content: "";
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #FEC260;
+    z-index: -1;
+    transition: all 0.5s;
+}
+h1:hover::after{
+    height: 70%;
+}
+
+.title h2{
+    font-family: 'Righteous', cursive;
+    font-weight: 500;
+    font-size: 25px !important;
+    color: rgb(69,165,90);
+    
+}
+
+.form-control:focus {
+    color: #212529;
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+.form .btn{
+    width: fit-content;
+    align-self: center;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+.book-form{
+    border-top: 2px dotted black ;
+    border-bottom:  2px dotted black ;
+}
+label{
+    font-family: 'PT Sans Caption', sans-serif;
+    font-weight: 600;
+}
+table{
+    text-transform: capitalize;
+}
+::selection{
+    background-color: #FEC260;
+}
+table{
+    font-family:var(--mainfont);
+}
+.inputdiv{
+    position: relative;
+}
+.nameerroricon
+,.nametrueicon
+,.urlerroricon
+,.urltrueicon{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #f00f0f;
+    transform: translate(-20px,50%);
+    display: none;
+}
+.nametrueicon,
+.urltrueicon{
+    color: rgb(25,135,84);
+}
+
+.dialog-open{
+    display: none;
+    font-family:var(--mainfont); 
+    font-weight: bolder;
+    width: 40%;
+    border-radius: 10px;
+    border: none;
+    padding:30px ;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.dialog-open p{
+    font-weight: 300;
+}
+.dialog-open .fa-arrow-right{
+color: red;
+padding-inline: 5px;
+}
+
+.dialog-open .rules{
+    padding: 10px;
+}
+.circle{
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.circles{
+    padding-bottom: 20px;
+    display: flex;
+    gap: 10px;
+}
+.dialog-open button{
+    border: none;
+    border-radius: 50%;
+    margin-left:auto;
+}
+.fa-xmark{
+    color: black;
+    font-size: 25px;
+   
+}
+

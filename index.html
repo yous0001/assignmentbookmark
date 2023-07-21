@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookmark</title>
+    <link rel="icon" href="bookmark-solid.svg">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section id="booksmark">
+    <div class="container">
+        <h1 class="text-center my-5 mx-auto">Bookmarker</h1>
+        <div class="book-form mt-2">
+            <div class="title m-auto">
+                <h2 class="text-center my-4 mx-1"><i class="fa-solid fa-bookmark"></i>Bookmark your favorite sites <i
+                        class="fa-solid fa-bookmark"></i></h2>
+            </div>
+            <div class="form gap-3 py-4 d-flex flex-column justify-content-around">
+                <div class="input-name px-3">
+                    <label class="my-2"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label><br>
+                    <div class="inputdiv">
+                    <input type="text" onkeyup="isnamevalid()" class="form-control" placeholder="Bookmark Name"
+                        name="input-book-name" id="input-book-name"><i id="nameerroricon" class="nameerroricon fa-solid fa-exclamation"></i><i id="nametrueicon" class=" nametrueicon fa-solid fa-check"></i></div>
+                </div>
+                <div class="input-url px-3">
+                    <label class="my-2"><i class="fa-solid fa-link"></i> Site URL</label><br>
+                    <div class="inputdiv"><input type="text" onkeyup="isUrlValid()" class="form-control" placeholder="Website URL"
+                        name="input-Website-URL" id="input-Website-URL"><i id="urlerroricon" class="urlerroricon fa-solid fa-exclamation"></i><i id="urltrueicon" class="urltrueicon fa-solid fa-check"></i></div>
+                </div>
+                <button class="btn btn-danger px-5" onclick="submitdata()" type="submit"> submit </button>
+            </div>
+        </div>
+        <div class="table text-center py-4">
+            <table class="table">
+                <thead class="">
+                    <th>Index</th>
+                    <th>Website name</th>
+                    <th>Visit</th>
+                    <th>delete</th>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+    <dialog open class="dialog-open"
+    id="dialog-open">
+        <div class="circles">
+            <div class="circle bg-danger"></div>
+            <div class="circle bg-warning"></div>
+            <div class="circle bg-success"></div>
+            <button onclick="closedialog()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <h3>Site Name or Url is not valid, Please follow the rules below :</h3>
+        <div class="rules">
+            <p><i class="fa-solid fa-arrow-right"></i>Site name must contain at least 3 characters</p>
+            <p><i class="fa-solid fa-arrow-right"></i>Site URL must be a valid one</p>
+            <p><i class="fa-solid fa-arrow-right"></i>Site can't be reapeated</p>
+            <p><i class="fa-solid fa-arrow-right"></i>click x to close window</p>
+
+        </div>
+
+    </dialog>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
